@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "sprint-two",
+		"path": ".."
+	}
+],
+  "settings": {
+    "git.ignoreLimitWarning": true
+  }
+}

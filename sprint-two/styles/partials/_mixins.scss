@@ -1,0 +1,82 @@
+@use './colors' as  *;
+@use './variables' as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin mobileheader {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-style: normal;
+  font-weight: 700;
+}
+@mixin mobilesectionheader {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-style: normal;
+  font-weight: 600;
+}
+@mixin mobilesubheader {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin mobilebodycopy {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin mobilefootercopy {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin header {
+  font-size: 3.75rem;
+  line-height: 4.2rem;
+  font-style: normal;
+  font-weight: 700;
+}
+@mixin sectionheader {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-style: normal;
+  font-weight: 700;
+}
+@mixin subheader {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin bodycopy {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin footercopy {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin copyright {
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+}
