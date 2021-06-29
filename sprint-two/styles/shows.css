@@ -288,30 +288,17 @@ iframe {
   }
 }
 
-.shows {
-  position: static;
-}
-.shows__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  color: #000000;
-  position: relative;
-  top: -7rem;
-  font-weight: 700;
-}
-@media (min-width: 768px) {
-  .shows__title {
-    font-size: 40px;
-    color: black;
-    margin-top: 0;
-    padding-left: 20px;
-  }
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .show-ticket {
   padding: 1rem;
+  position: relative;
+  top: -80px;
 }
 @media (min-width: 768px) {
   .show-ticket {
@@ -319,44 +306,173 @@ iframe {
   }
 }
 
-.concerts {
-  padding: 1rem;
+.shows__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  font-weight: 700;
+  color: #323232;
   position: relative;
-  top: -12rem;
-}
-.shows__list {
-  list-style: none;
-  position: relative;
-  top: -6rem;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  .shows__list {
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+  .shows__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
+    color: #323232;
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-style: normal;
+    font-weight: 700;
     font-weight: 600;
-    display: flex;
+    position: relative;
+    top: 54px;
+    left: 80px;
   }
 }
 
-.shows-list__item {
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  font-weight: 600;
-  padding-bottom: 2rem;
+@media (min-width: 1280px) {
+  .container-small {
+    margin: 0 9rem 0 18rem;
+  }
 }
 
-.shows-list__title {
-  color: #afafaf;
+@media (min-width: 768px) {
+  .main-holder {
+    display: flex;
+    min-width: 500px;
+  }
+}
+
+.main-subtitle {
+  opacity: 0;
+}
+@media (min-width: 768px) {
+  .main-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 600;
+    opacity: 1;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    color: #afafaf;
+  }
+}
+@media (min-width: 1280px) {
+  .main-subtitle {
+    margin-bottom: 1.5rem;
+    width: 27%;
+  }
+}
+
+#shows {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #shows {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.show-list {
+  list-style: none;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .show-list {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.title-cont {
+  margin-bottom: 0rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .title-cont {
+    display: none;
+  }
+}
+
+.show-list__title {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-style: normal;
   font-weight: 400;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  color: #afafaf;
+}
+@media (min-width: 768px) {
+  .show-list__title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0;
+    color: #afafaf;
+    font-weight: 600;
+    opacity: 0;
+  }
+}
+
+.show-list__item {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #323232;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .show-list__item {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    color: #323232;
+    font-weight: 600;
+    margin-top: 2rem;
+    padding: 0;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .show-list__item {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 600;
+    width: 27%;
+  }
+}
+
+.show-list__item--bold {
+  font-weight: 700;
 }
 
 .button {
@@ -364,19 +480,39 @@ iframe {
   color: #e1e1e1;
   background-color: #323232;
   border-radius: 0.25rem;
-  margin-bottom: 1rem;
   height: 2.5rem;
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .button {
-    width: 9.375rem;
+    margin-top: 1em;
+    margin-bottom: 0;
+    width: 9.4rem;
+    position: relative;
+    left: 75%;
+    top: -3.5em;
+    margin-left: 3%;
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .button {
+    margin-left: 6%;
   }
 }
 
 .button:hover {
   color: #ffffff;
   font-weight: 600;
+}
+
+hr {
+  height: 2px;
+  color: none;
+  background-color: #e1e1e1;
+  border: none;
 }
 
 .footer {
@@ -496,10 +632,11 @@ iframe {
 .card-info {
   margin-bottom: 1rem;
   color: #ffffff;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .card-info {
@@ -516,6 +653,22 @@ iframe {
     font-style: normal;
     font-weight: 400;
   }
+}
+
+.card__info-name {
+  font-weight: 100;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.card__info-position {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
 }
 
 .card-address {
@@ -574,10 +727,8 @@ iframe {
 
 .ndcard-info {
   color: #ffffff;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
+  font-weight: normal;
 }
 @media (min-width: 768px) {
   .ndcard-info {
@@ -597,8 +748,25 @@ iframe {
   }
 }
 
+.ndcard__info-name {
+  font-weight: 100;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.ndcard__info-location--bold {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
 .ndcard__info-address {
   color: #ffffff;
+  font-weight: 400;
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -681,6 +849,18 @@ iframe {
     font-style: normal;
     font-weight: 400;
   }
+}
+
+.rdcard__info-name {
+  font-weight: 100;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.rdcard__info-location--bold {
+  font-weight: 600;
 }
 
 .rdcard__info-address {

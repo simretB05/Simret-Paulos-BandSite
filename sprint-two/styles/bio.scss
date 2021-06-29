@@ -531,23 +531,21 @@ textarea {
   width: 30%;
   padding: 0;
   margin: 0;
-
- 
   }
   @include tablet{
     width: 30%;
   }
 }
 
-#submit {
 
+
+button{
+  background-color: $bandsite-black;
+  color: $mercury;
   display: block;
-  margin: 0 auto;
   width: 100%;
   height: 2.5rem;
   border-radius: 4px;
-  background-color: $bandsite-black;
-  color: $mercury;
   margin-top: 25px;
   font-weight: bold;
   @include tablet{
@@ -555,12 +553,13 @@ textarea {
     padding: 0 $padding*1.5;
     @include bodycopy();
     font-weight: 700;
-   
-    
   }
   
 }
-.btn:hover {
+button:active{
+  color: $white;
+}
+button:hover{
   color: $white;
 }
 .comment-storage {
@@ -743,8 +742,13 @@ text-align: justify;
     @include footercopy();
   }
 }
+
 .card__info-name{
   font-weight: 100;
+  @include mobilesubheader()
+}
+.card__info-position{
+  font-weight: 700;
   @include mobilesubheader()
 }
 .card-address {

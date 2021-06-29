@@ -230,79 +230,169 @@ iframe {
     height: 180px;
   }
 }
-
-.shows {
-  position: static;
-  &__title {
-    @include mobileheader();
-    color: $bandsite-darkblac;
-    position: relative;
-    top: -7rem;
-    font-weight: 700;
-
-    @include tablet {
-      font-size: 40px;
-      color: black;
-      margin-top: 0;
-
-      padding-left: 20px;
-    }
-  }
+.main-wrap{
+ display: flex;
+ flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  
 }
 .show-ticket {
   padding: $padding;
-  @include tablet {
-    padding: $padding * 2;
-  }
-}
-.concerts {
-  padding: 1rem;
   position: relative;
-  top: -12rem;
-  //padding: $padding * 2;
-  @include tablet {
+  top: -80px;
+  @include tablet{
+    padding: $padding*2;
   }
 }
-#shows-venue {
-  @include tablet {
-  }
-}
-.shows__list {
-  list-style: none;
+
+.shows__title {
+ @include mobileheader();
+  font-weight: 700;
+  color: $bandsite-black;
   position: relative;
-  top: -6rem;
-  @include tablet {
-    @include mobilebodycopy();
+  margin-bottom: 0;
+ @include tablet{
+  @include sectionheader();
+    color: $bandsite-black;
+    margin-top: 0;
+   font-weight: 700;
+    margin-bottom: $margin*1.4;
+  }
+  @include desktop{
+    @include sectionheader();
     font-weight: 600;
-    display: flex;
+    position: relative;
+    top: 54px;
+    left: 80px;
   }
 }
-.shows-list__item {
+.container-small{
+  @include desktop{
+  margin:0 $margin*9 0 $margin*18;
+}
+}
+.main-holder {
+  @include tablet{
+  display: flex;
+ min-width: 500px 
+}
+}
+.main-subtitle{
+  opacity: 0;
+ @include tablet{
+  @include bodycopy();
+    font-weight: 600;
+    opacity: 1;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    color: $silver;
+
+  }
+  @include desktop{
+    margin-bottom: $margin*1.5;
+    width: 27%;
+  }
+}
+#shows{
+  width: 100%;
+  @include tablet{
+    padding: 0;
+    margin: 0;
+  }
+  }
+.show-list {
+ list-style: none;
+  padding-top: $padding;
+@include tablet{
+@include sectionheader();
+  display: flex;
+  margin: 0;
+  padding: 0;
+  }
+
+}
+.title-cont {
+  margin-bottom: $margin*0;
+  @include mobilebodycopy();
+  @include tablet{
+  display: none;
+  }
+}
+.show-list__title {
   @include mobilebodycopy();
   font-weight: 600;
-  padding-bottom: $padding * 2;
+  color:$silver;
+  @include tablet{
+  @include bodycopy();
+  padding: 0;
+    color: $silver;
+    font-weight: 600;
+    opacity: 0;
+  }
 }
-.shows-list__title {
-  color: $silver;
+.show-list__item {
   @include mobilebodycopy();
-  font-weight: 600;
-  margin-bottom: $padding * 1.5;
+  color:$bandsite-black;
+  margin-bottom: $margin*.5;
+  font-weight: 700;
+   @include tablet{
+    @include bodycopy();
+    color: $bandsite-black;
+    font-weight: 600;
+    margin-top:$margin*2 ;
+    padding: 0;
+    width: 25%;
+    @include desktop{
+      @include bodycopy();
+      font-weight: 600;
+      width: 27%;
+    }
+ 
+  }
 }
+.show-list__item--bold{
+font-weight: 700;
+}
+
+
 .button {
   width: 100%;
   color: $mercury;
-  background-color: $bandsite-black;
+  background-color:$bandsite-black;
   border-radius: 0.25rem;
-  margin-bottom: 1rem;
   height: 2.5rem;
   text-align: center;
-  @include tablet {
-    width: 9.375rem;
+  margin-top: $margin*2;
+  margin-bottom: $margin*1;
+@include tablet{
+    margin-top: 1em;
+    margin-bottom: 0;
+    width: 9.4rem;
+    position: relative;
+    left: 75%;
+    top: -3.5em;
+    margin-left: 3%;
+    padding: 0 $padding*2;
+
   }
+  @include desktop{
+    margin-left: 6%;
+  } 
+    
+  
 }
+
 .button:hover {
-  color: $white;
+  color:$white;
   font-weight: 600;
+}
+hr{
+  height: 2px;
+  color: none;
+  background-color:  $mercury;
+  border: none;
 }
 .footer {
   background-color: $bandsite-black;
@@ -389,7 +479,8 @@ iframe {
   margin-bottom: $margin;
   color: $white;
 
-  @include mobilefootercopy();
+  @include mobilesubheader();
+  font-weight: 600;
 
   @include tablet {
     @include footercopy();
@@ -397,6 +488,14 @@ iframe {
   @include desktop {
     @include footercopy();
   }
+}
+.card__info-name{
+  font-weight: 100;
+  @include mobilesubheader()
+}
+.card__info-position{
+  font-weight: 700;
+  @include mobilesubheader()
 }
 .card-address {
   color: $white;
@@ -434,8 +533,8 @@ iframe {
 }
 .ndcard-info {
   color: $white;
-  @include mobilefootercopy();
-
+ font-weight: 600;
+font-weight: normal;
   @include tablet {
     margin-bottom: 2.05rem;
     @include footercopy();
@@ -444,9 +543,17 @@ iframe {
     @include footercopy();
   }
 }
-
+.ndcard__info-name{
+  font-weight: 100;
+  @include mobilesubheader()
+}
+.ndcard__info-location--bold{
+  font-weight: 700;
+  @include mobilesubheader()
+}
 .ndcard__info-address {
   color: $white;
+  font-weight: 400;
   @include mobilefootercopy();
   margin-top: 1rem;
 
@@ -458,6 +565,7 @@ iframe {
     @include footercopy();
   }
 }
+
 .ndcard__info-emailaddress {
   color: $white;
   margin-bottom: 1rem;
@@ -492,7 +600,13 @@ iframe {
     @include footercopy();
   }
 }
-
+.rdcard__info-name{
+  font-weight: 100;
+  @include mobilesubheader()
+}
+ .rdcard__info-location--bold{
+   font-weight: 600;
+ }
 .rdcard__info-address {
   color: $white;
   margin-top: 1rem;

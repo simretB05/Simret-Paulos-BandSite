@@ -711,19 +711,18 @@ textarea {
   }
 }
 
-#submit {
+button {
+  background-color: #323232;
+  color: #e1e1e1;
   display: block;
-  margin: 0 auto;
   width: 100%;
   height: 2.5rem;
   border-radius: 4px;
-  background-color: #323232;
-  color: #e1e1e1;
   margin-top: 25px;
   font-weight: bold;
 }
 @media (min-width: 768px) {
-  #submit {
+  button {
     height: 2.5rem;
     padding: 0 1.5rem;
     font-size: 0.875rem;
@@ -734,7 +733,11 @@ textarea {
   }
 }
 
-.btn:hover {
+button:active {
+  color: #ffffff;
+}
+
+button:hover {
   color: #ffffff;
 }
 
@@ -981,6 +984,14 @@ textarea {
 
 .card__info-name {
   font-weight: 100;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.card__info-position {
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-style: normal;
